@@ -3,21 +3,58 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  Text,
   View,
   TouchableOpacity,
   TextInput,
   AsyncStorage
 } from 'react-native';
+import {
+  Container, 
+  Header, 
+  Title, 
+  Content, 
+  Footer, 
+  FooterTab, 
+  Button, 
+  Left, 
+  Right, 
+  Body, 
+  Icon, 
+  Text,
+  Tab,
+  Tabs,
+  Card, 
+  CardItem, 
+  Thumbnail
+} from 'native-base'
 import styles from './../styles'
 
-var user_list = [];
-
-AsyncStorage.getItem('user_list', (err, result) => {
-  if (result!=null) {
-    user_list = JSON.parse(result)
+const users = [
+  {
+    "id": 1,
+    "nombre": "Leopoldo Montesinos",
+    "detalles": [
+      false,
+      [{"key": "Nota", "type": "str", "value": "¿Zapatos Para Dame?"}],
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Monica",
+    "detalles": [
+      [{"key": "Nota", "type": "str", "value": "¿Zapatos Para Caballeros?"}],
+      [{"key": "Nota", "type": "str", "value": "Parece Que No Tenemos Tallas 34, como acostumbras comprar"}],
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Monica",
+    "detalles": [
+      [{"key": "Nota", "type": "str", "value": "Deberias Reguistrarte Para Tener Una Mejor Esperiencia"}],
+      [{"key": "Nota", "type": "str", "value": "Deberias Reguistrarte Para Tener Una Mejor Esperiencia"}],
+    ]
   }
-});
+]
 
 export default class Login extends React.Component {
   static navigationOptions = {
@@ -31,43 +68,26 @@ export default class Login extends React.Component {
       password: null, 
       modalVisible: false,
     };
-    this.login = this.login.bind(this)
-  }
-  login(){
-    this.props.navigation.navigate('Index')
   }
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome!
-        </Text>
-        <TextInput 
-          style={styles.input} 
-          placeholder="Username" 
-          onChangeText={ (text) => this.setState({ username: text }) }
-          value={this.state.username}
-        />
-        <TextInput 
-          style={styles.input} 
-          secureTextEntry={true} 
-          placeholder="Password" 
-          onChangeText={ (text) => this.setState({ password: text }) }
-          value={this.state.password}
-        />
         <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.login()}
+          style={{width: '100%'}}
+          onPress={() => navigate('Index', {user: users[0]})}
         >
-          <Text> Login </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigate('Register')}
-        >
-          <Text> Register </Text>
-        </TouchableOpacity>
+          <Card style={{flex: 0}}>
+            <CardItem>
+              <Left>
+                <Thumbnail source={require('../img/user.jpeg')} />
+                <Body>
+                  <Text>Leopoldo Montesinos</Text>
+                </Body>
+              </Left>
+            </CardItem>
+          </Card>
+       </TouchableOpacity>
       </View>
     );
   }

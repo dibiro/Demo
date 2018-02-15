@@ -38,57 +38,28 @@ import Lightbox from 'react-native-lightbox'
 const productos = [
   {
     "id": 1,
-    "nombre": "Camisa Local Atletico Nacional",
+    "nombre": "Casuales",
+    "img": "../img/zapatoscasuales.jpg",
     "precio" : "150,000",
+    "descripcion" : "Lorem ipsum in ut cillum duis fugiat consequat eu est adipisicing dolore elit laboris dolor duis excepteur ut aliqua ut labore ea quis velit dolore adipisicing ea cillum et ex nulla in est tempor in ut ea sunt sed.",
     "ventas": "546",
     "detalles": [
-      {"key": "Tallas", "type": "str", "value": "S, M, XL"},
-      {"key": "Marca", "type": "str", "value": "Adidas"},
-      {"key": "Colores", "type": "str", "value": "Verde"},
+      {"key": "Tallas", "type": "arrey", "value": ["34", "36", "38", "42"]},
+      {"key": "Marca", "type": "str", "value": "Dolce & Gabbana"},
+      {"key": "Colores", "type": "arrey", "value": ["azul", "negro", "gris", "marron"]},
     ]
   },
   {
     "id": 2,
-    "nombre": "Camisa Colombia Visitante",
+    "nombre": "Tacones",
+    "img": "../img/zapatoscasuales.jpg",
     "precio" : "230,000",
+    "descripcion" : "Lorem ipsum in ut cillum duis fugiat consequat eu est adipisicing dolore elit laboris dolor duis excepteur ut aliqua ut labore ea quis velit dolore adipisicing ea cillum et ex nulla in est tempor in ut ea sunt sed.",
     "ventas": "43",
     "detalles": [
-      {"key": "Tallas", "type": "str", "value": "S, M, L"},
-      {"key": "Marca", "type": "str", "value": "Adidas"},
-      {"key": "Colores", "type": "str", "value": "Rojo"},
-    ]
-  },
-  {
-    "id": 3,
-    "nombre": "Camisa Inter Milan Local",
-    "precio" : "220,000",
-    "ventas": "43",
-    "detalles": [
-      {"key": "Tallas", "type": "str", "value": "M, L"},
-      {"key": "Marca", "type": "str", "value": "Nike"},
-      {"key": "Colores", "type": "str", "value": "Azul"},
-    ]
-  },
-  {
-    "id": 4,
-    "nombre": "Camisa Colombia Local",
-    "precio" : "180,000",
-    "ventas": "43",
-    "detalles": [
-      {"key": "Tallas", "type": "str", "value": "M, L"},
-      {"key": "Marca", "type": "str", "value": "Adidas"},
-      {"key": "Colores", "type": "str", "value": "Amarilla"},
-    ]
-  },
-  {
-    "id": 5,
-    "nombre": "Camisa Real Madrid",
-    "precio" : "180,000",
-    "ventas": "43",
-    "detalles": [
-      {"key": "Tallas", "type": "str", "value": "M, L"},
-      {"key": "Marca", "type": "str", "value": "Adidas"},
-      {"key": "Colores", "type": "str", "value": "Blanco"},
+      {"key": "Tallas", "type": "arrey", "value": ["36", "38"]},
+      {"key": "Marca", "type": "str", "value": "Christian Louboutin"},
+      {"key": "Colores", "type": "arrey", "value": ["azul", "negro", "gris", "marron"]},
     ]
   }
 ]
@@ -178,7 +149,7 @@ export default class Index extends React.Component {
           <this.Scanner />
           { !this.state.producto &&
             <Text>
-              Bienvenido, Escanea El Producto Que Te Gusto 
+              Porfavor Escanea Un Condigo, 
             </Text>
           }
           { this.state.producto &&
