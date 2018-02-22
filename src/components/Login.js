@@ -34,8 +34,6 @@ const users = [
     "id": 1,
     "nombre": "Leopoldo Montesinos",
     "detalles": [
-      false,
-      [{"key": "Nota", "type": "str", "value": "¿Zapatos Para Dame?"}],
     ]
   },
   {

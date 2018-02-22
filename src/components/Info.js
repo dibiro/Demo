@@ -33,6 +33,7 @@ import {
   CardItem, 
   Thumbnail,
   Form,
+  Item
 } from 'native-base'
 import BarcodeScanner from 'react-native-barcodescanner'
 import Lightbox from 'react-native-lightbox'
@@ -125,7 +126,28 @@ export default class Info extends React.Component {
             </Header>
             <Content>
               <Form style={{width: '100%'}} >
-                { !this.props.navigation.state.params.user.detalles[this.props.navigation.state.params.producto.id-1] &&
+                <Item>
+                  <Text>
+                    ¿Como quieres que entregemos tu producto?
+                  </Text>
+                </Item>
+                { this.props.navigation.state.params.producto.id === 3 &&
+                  <Picker
+                    style={{width: '100%'}}
+                    selectedValue={this.state.selected1}
+                    onValueChange={(itemValue, itemIndex) => this.setState({selected1: itemValue})}>
+                    <Picker.Item label="Entrega Directo En Tu Casa" value="key0" />
+                  </Picker>
+                }
+                { this.props.navigation.state.params.producto.id === 5 &&
+                  <Picker
+                    style={{width: '100%'}}
+                    selectedValue={this.state.selected1}
+                    onValueChange={(itemValue, itemIndex) => this.setState({selected1: itemValue})}>
+                    <Picker.Item label="Entrega Directo En Tu Casa" value="key0" />
+                  </Picker>
+                }
+                { this.props.navigation.state.params.producto.id === 1 &&
                   <Picker
                     style={{width: '100%'}}
                     selectedValue={this.state.selected1}
@@ -134,12 +156,22 @@ export default class Info extends React.Component {
                     <Picker.Item label="Recoger Ahora En Caja" value="key1" />
                   </Picker>
                 }
-                { this.props.navigation.state.params.user.detalles[this.props.navigation.state.params.producto.id-1] &&
+                { this.props.navigation.state.params.producto.id === 2 &&
                   <Picker
                     style={{width: '100%'}}
                     selectedValue={this.state.selected1}
                     onValueChange={(itemValue, itemIndex) => this.setState({selected1: itemValue})}>
                     <Picker.Item label="Entrega Directo En Tu Casa" value="key0" />
+                    <Picker.Item label="Recoger Ahora En Caja" value="key1" />
+                  </Picker>
+                }
+                { this.props.navigation.state.params.producto.id === 4 &&
+                  <Picker
+                    style={{width: '100%'}}
+                    selectedValue={this.state.selected1}
+                    onValueChange={(itemValue, itemIndex) => this.setState({selected1: itemValue})}>
+                    <Picker.Item label="Entrega Directo En Tu Casa" value="key0" />
+                    <Picker.Item label="Recoger Ahora En Caja" value="key1" />
                   </Picker>
                 }
               </Form>
@@ -183,7 +215,7 @@ export default class Info extends React.Component {
                   <CardItem>
                     <Left>
                       { this.props.navigation.state.params.producto.id === 1 &&
-                        <Thumbnail source={require('../img/p1.jpg')} />
+                        <Thumbnail source={require('../img/p1-1.jpg')} />
                       }
                       { this.props.navigation.state.params.producto.id === 2 &&
                         <Thumbnail source={require('../img/p2.jpg')} />
@@ -197,6 +229,7 @@ export default class Info extends React.Component {
                       { this.props.navigation.state.params.producto.id === 5 &&
                         <Thumbnail source={require('../img/p5.jpg')} />
                       }
+
                       <Body>
                         <Text>{this.props.navigation.state.params.producto.nombre}</Text>
                         <Text note>$ {this.props.navigation.state.params.producto.precio}</Text>
@@ -206,7 +239,7 @@ export default class Info extends React.Component {
                   <CardItem>
                     <Body>
                       { this.props.navigation.state.params.producto.id === 1 &&
-                        <Image source={require('../img/p1.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
+                        <Image source={require('../img/p1-1.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
                       }
                       { this.props.navigation.state.params.producto.id === 2 &&
                         <Image source={require('../img/p2.jpg')} style={{height: 200, width: '100%', flex: 1}}/>
@@ -284,7 +317,7 @@ export default class Info extends React.Component {
                     this.props.navigation.state.params.producto.detalles &&
                     this.props.navigation.state.params.producto.detalles.map(
                       (detalle, index) => (
-                        <CardItem key={'detalle'+index}>
+                        <CardItem key={'detalle'+index} style={{borderColor: detalle.key === "Nota" ? 'black' : 'white', borderWidth: 1,}}>
                           <Left>
                             <Text>
                               {detalle.key}:

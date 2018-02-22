@@ -39,9 +39,10 @@ const productos = [
   {
     "id": 1,
     "nombre": "Camisa Local Atletico Nacional",
-    "precio" : "150,000",
+    "precio" : "185,000",
     "ventas": "546",
     "detalles": [
+      {"key": "Nota", "type": "str", "value": "Recién Llegado A La Tienda Se El Primero En Llevártela."},
       {"key": "Tallas", "type": "str", "value": "S, M, XL"},
       {"key": "Marca", "type": "str", "value": "Adidas"},
       {"key": "Colores", "type": "str", "value": "Verde"},
@@ -50,9 +51,10 @@ const productos = [
   {
     "id": 2,
     "nombre": "Camisa Colombia Visitante",
-    "precio" : "230,000",
+    "precio" : "140,000",
     "ventas": "43",
     "detalles": [
+      {"key": "Nota", "type": "str", "value": "Eres Un Aficionado A Nuestra Selección Si Te Decides Ahora Por Esta Camisa Te Puedes Llevar La Segunda Con 50% De Descuento."},
       {"key": "Tallas", "type": "str", "value": "S, M, L"},
       {"key": "Marca", "type": "str", "value": "Adidas"},
       {"key": "Colores", "type": "str", "value": "Rojo"},
@@ -61,9 +63,10 @@ const productos = [
   {
     "id": 3,
     "nombre": "Camisa Inter Milan Local",
-    "precio" : "220,000",
+    "precio" : "160,000",
     "ventas": "43",
     "detalles": [
+      {"key": "Nota", "type": "str", "value": "Ups En Este Momento No Tenemos Esta Camisa, En Nuestra Tienda, Pero Esta Disponible Para Que Te La Enviemos O La Recojas Ahora Mismo En La Tienda De Milla De Oro."},
       {"key": "Tallas", "type": "str", "value": "M, L"},
       {"key": "Marca", "type": "str", "value": "Nike"},
       {"key": "Colores", "type": "str", "value": "Azul"},
@@ -75,6 +78,7 @@ const productos = [
     "precio" : "180,000",
     "ventas": "43",
     "detalles": [
+      {"key": "Nota", "type": "str", "value": "Tu Talla Esta Lista Para Que La Empieces A Usar, Confirma Tu Compra."},
       {"key": "Tallas", "type": "str", "value": "M, L"},
       {"key": "Marca", "type": "str", "value": "Adidas"},
       {"key": "Colores", "type": "str", "value": "Amarilla"},
@@ -82,11 +86,12 @@ const productos = [
   },
   {
     "id": 5,
-    "nombre": "Camisa Real Madrid",
+    "nombre": "Camisa Local Real Madrid",
     "precio" : "180,000",
     "ventas": "43",
     "detalles": [
-      {"key": "Tallas", "type": "str", "value": "M, L"},
+      {"key": "Nota", "type": "str", "value": "De Acuerdo A Tus Compras Anteriores Tu Talla (M), No Está Disponible, Pero Te La Podemos Hacer Llegar A Tu Casa En 15 Días."},
+      {"key": "Tallas", "type": "str", "value": "L"},
       {"key": "Marca", "type": "str", "value": "Adidas"},
       {"key": "Colores", "type": "str", "value": "Blanco"},
     ]
