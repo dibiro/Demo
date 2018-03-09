@@ -1,0 +1,38 @@
+C:\chet\OnBussniseDemo>keytool -genkey -v -keystore OnbusinessDemo.keystore -alias OnBusiness-alias -keyalg RSA -keysize 2048 -validity 10000
+Introduzca la contraseña del almacén de claves:
+Volver a escribir la contraseña nueva:
+¿Cuáles son su nombre y su apellido?
+  [Unknown]:  leopoldo montesinos
+¿Cuál es el nombre de su unidad de organización?
+  [Unknown]:  Onbusiness Consulting
+¿Cuál es el nombre de su organización?
+  [Unknown]:  Onbusiness Consulting
+¿Cuál es el nombre de su ciudad o localidad?
+  [Unknown]:  medellin
+¿Cuál es el nombre de su estado o provincia?
+  [Unknown]:  antioquia
+¿Cuál es el código de país de dos letras de la unidad?
+  [Unknown]:  CL
+¿Es correcto CN=leopoldo montesinos, OU=Onbusiness Consulting, O=Onbusiness Consulting, L=medellin, ST=antioquia, C=CL?
+  [no]:
+¿Cuáles son su nombre y su apellido?
+  [leopoldo montesinos]:
+¿Cuál es el nombre de su unidad de organización?
+  [Onbusiness Consulting]:
+¿Cuál es el nombre de su organización?
+  [Onbusiness Consulting]:
+¿Cuál es el nombre de su ciudad o localidad?
+  [medellin]:
+¿Cuál es el nombre de su estado o provincia?
+  [antioquia]:
+¿Cuál es el código de país de dos letras de la unidad?
+  [CL]:
+¿Es correcto CN=leopoldo montesinos, OU=Onbusiness Consulting, O=Onbusiness Consulting, L=medellin, ST=antioquia, C=CL?
+  [no]:  si
+
+Generando par de claves RSA de 2.048 bits para certificado autofirmado (SHA256withRSA) con una validez de 10.000 días
+        para: CN=leopoldo montesinos, OU=Onbusiness Consulting, O=Onbusiness Consulting, L=medellin, ST=antioquia, C=CL
+Introduzca la contraseña de clave para <OnBusiness-alias>
+        (INTRO si es la misma contraseña que la del almacén de claves):
+Volver a escribir la contraseña nueva:
+[Almacenando OnbusinessDemo.keystore]

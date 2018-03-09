@@ -135,7 +135,7 @@ export default class Index extends React.Component {
           </Body>
           <Right>
             { this.props.navigation.state.params.user.id === 1 &&
-              <Thumbnail source={require('../img/user.jpeg')} />
+              <Thumbnail source={require('../img/freddy.png')} />
             }
             { this.props.navigation.state.params.user.id === 2 &&
               <Thumbnail source={require('../img/monica.jpg')} />

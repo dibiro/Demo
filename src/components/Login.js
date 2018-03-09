@@ -32,7 +32,7 @@ import styles from './../styles'
 const users = [
   {
     "id": 1,
-    "nombre": "Leopoldo Montesinos",
+    "nombre": "Fredy Villegas Gomez",
     "detalles": [
     ]
   },
@@ -78,9 +78,9 @@ export default class Login extends React.Component {
           <Card style={{flex: 0}}>
             <CardItem>
               <Left>
-                <Thumbnail source={require('../img/user.jpeg')} />
+                <Thumbnail source={require('../img/freddy.png')} />
                 <Body>
-                  <Text>Leopoldo Montesinos</Text>
+                  <Text>Fredy Villegas Gomez</Text>
                 </Body>
               </Left>
             </CardItem>
