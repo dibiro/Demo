@@ -15,7 +15,7 @@
     "test:watch": "jest --watch",
     "updateSnapshot": "jest --updateSnapshot",
     "coverage": "jest --coverage && open coverage/lcov-report/index.html || xdg-open coverage/lcov-report/index.html",
-    "android": "react-native-scripts android",
+    "android": "react-native run-android",
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
     "android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
@@ -34,6 +34,7 @@
     "react": "16.2.0",
     "react-native": "0.53.0",
     "react-native-barcodescanner": "^3.1.1",
+    "react-native-cli": "^2.0.1",
     "react-native-lightbox": "^0.7.0",
     "react-navigation": "^1.0.3"
   },
